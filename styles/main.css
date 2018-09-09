@@ -5,6 +5,11 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+header {
+  height: 100vh;
+  background-color: #212121;
+}
+
 nav {
   width: 100%;
   padding: 10px 0px;
@@ -15,7 +20,7 @@ nav {
   align-items: center;
 
   background-color: #181818;
-  color: #fafafa;
+  color: #f0f0f0;
 }
 
 nav.fixed {
@@ -28,18 +33,23 @@ nav a {
   transition: color .25s;
   text-decoration: none;
   color: inherit;
+  transition: color 0.25s;
 }
 
-#main {
-  height: 100vh;
-  background-color: #212121;
+nav a:hover,
+nav a.active {
+  color: red;
 }
 
 #title {
   height: 100%;
 }
 
-#contact {
+#work {
+  background-color: #efefef;
+}
+
+footer {
   background-color: #181818;
   border-top: 4px solid #a2a2a2;
 }
