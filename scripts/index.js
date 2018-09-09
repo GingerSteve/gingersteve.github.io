@@ -1,5 +1,5 @@
 $(function() {
-  var navPos = Math.floor($('nav').position().top);
+  var navPos = $('nav').position().top;
   var navHeight = $('nav').outerHeight();
 
   var navLinks = $('nav a').map(function(i) {
@@ -28,7 +28,7 @@ $(function() {
       // Select the nav link corresponding to the current section
       for (let i = 0; i < navLinks.length; i++) {
         let sectionId = navLinks[i];
-        let sectionPos = $(sectionId).offset().top - navHeight - 4;
+        let sectionPos = $(sectionId).offset().top - navHeight;
         let sectionHeight = $(sectionId).height();
 
         if (windowPos >= sectionPos && windowPos < (sectionPos + sectionHeight))
