@@ -20,7 +20,7 @@ nav {
   align-items: center;
 
   background-color: #181818;
-  color: #f0f0f0;
+  color: #fafafa;
 }
 
 nav.fixed {
@@ -50,8 +50,26 @@ nav a.active {
 }
 
 footer {
-  background-color: #181818;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100px;
   border-top: 4px solid #a2a2a2;
+  background-color: #212121;
+}
+
+footer a {
+  text-decoration: none;
+  margin: 0px 30px;
+  border-radius: 4px;
+  font-size: 36px;
+  color: #fafafa;
+  transition: all 0.25s;
+}
+
+footer a:hover {
+  color: red;
 }
 
 .flex-centre {
@@ -64,6 +82,6 @@ footer {
 h1 {
   font-family: 'Roboto Slab', serif;
   text-align: center;
-  color: white;
+  color: #fafafa;
   font-size: 48pt;
 }
