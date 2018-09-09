@@ -41,7 +41,6 @@ $(function() {
 
   $('.section-link').click(function(e) {
     e.preventDefault();
-    this.blur();
 
     var elem = $(this).attr('href');
     $('html, body').animate({

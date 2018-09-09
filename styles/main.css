@@ -36,9 +36,14 @@ nav a {
   transition: color 0.25s;
 }
 
-nav a:hover,
 nav a.active {
   color: red;
+}
+
+@media (hover: hover) {
+  nav a:hover {
+    color: red;
+  }
 }
 
 #title {
