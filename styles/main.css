@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   color: #333;
@@ -8,11 +16,15 @@ body {
 header {
   height: 100vh;
   background-color: #212121;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 nav {
   width: 100%;
-  height: 50px;
+  height: 55px;
   border-bottom: 4px solid #a2a2a2;
 
   display: flex;
@@ -46,13 +58,11 @@ nav a.active {
   }
 }
 
-#title {
-  flex: 1;
-}
-
 section {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
 }
 
 section:nth-child(2n+1) {
@@ -82,13 +92,6 @@ footer a:hover {
   color: red;
 }
 
-.flex-centre {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 h1 {
   font-family: 'Roboto Slab', serif;
   text-align: center;
@@ -99,8 +102,6 @@ h1 {
 h2 {
   font-size: 20pt;
   text-align: center;
-  margin: 0px;
-  padding-top: 30px;
 }
 
 /* TODO: replace this with a hr the width of the content? */
@@ -111,4 +112,21 @@ h2::after {
   width: 50px;
   border-bottom: 2px solid #333;
   margin: 10px auto;
+}
+
+h3 {
+  margin: 0px;
+}
+
+#title {
+  flex: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
 }

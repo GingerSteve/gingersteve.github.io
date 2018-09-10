@@ -8,7 +8,7 @@ $(function() {
 
   // Update the position of the nav bar when the window is resized
   $(window).resize(function(e) {
-    navPos = $('#main').position().top + $('#main').outerHeight(true) - $('nav').outerHeight(true);
+    navPos = $('header').position().top + $('header').outerHeight(true) - $('nav').outerHeight(true);
     $(window).scroll();
   });
 
@@ -29,7 +29,7 @@ $(function() {
       for (let i = 0; i < navLinks.length; i++) {
         let sectionId = navLinks[i];
         let sectionPos = $(sectionId).offset().top - navHeight;
-        let sectionHeight = $(sectionId).height();
+        let sectionHeight = $(sectionId).outerHeight();
 
         if (windowPos >= sectionPos && windowPos < (sectionPos + sectionHeight))
           $('a[href="' + sectionId + '"]').addClass('active');
