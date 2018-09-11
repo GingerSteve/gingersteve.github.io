@@ -125,6 +125,7 @@ p {
   bottom: 0px;
   left: -100px;
   right: -100px;
+  overflow: hidden;
   z-index: -1;
 }
 
