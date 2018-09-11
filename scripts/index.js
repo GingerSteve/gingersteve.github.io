@@ -1,4 +1,6 @@
 $(function() {
+  particlesJS.load('particles-js', './scripts/particlesjs-config.json');
+
   var navPos = $('nav').position().top;
   var navHeight = $('nav').outerHeight();
 
@@ -49,10 +51,10 @@ $(function() {
   });
 
   $('.work-item .outline-button-dark').click(function(e) {
-    $(this).closest('.work-item').children('.modal').fadeIn();
+    $(this).closest('.work-item').children('.modal').fadeIn(250);
   });
 
   $('.modal').click(function(e) {
-    $(this).fadeOut();
+    $(this).fadeOut(250);
   });
 })

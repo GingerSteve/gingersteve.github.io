@@ -15,8 +15,6 @@ body {
 
 header {
   height: 100vh;
-  background-color: #212121;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,8 +102,6 @@ h2 {
   text-align: center;
 }
 
-/* TODO: replace this with a hr the width of the content? */
-
 h2::after {
   content: '';
   display: block;
@@ -120,6 +116,16 @@ h3 {
 
 p {
   margin: 0;
+}
+
+#particles-js {
+  position: absolute;
+  background-color: #212121;
+  top: 0px;
+  bottom: 0px;
+  left: -100px;
+  right: -100px;
+  z-index: -1;
 }
 
 #title {
