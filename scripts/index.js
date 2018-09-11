@@ -47,4 +47,12 @@ $(function() {
       scrollTop: $(elem).offset().top - navHeight
     }, 250);
   });
+
+  $('.work-item .outline-button-dark').click(function(e) {
+    $(this).closest('.work-item').children('.modal').fadeIn();
+  });
+
+  $('.modal').click(function(e) {
+    $(this).fadeOut();
+  });
 })
