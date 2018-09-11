@@ -44,7 +44,7 @@ $(function() {
 
     var elem = $(this).attr('href');
     $('html, body').animate({
-      scrollTop: $(elem).offset().top - navHeight
+      scrollTop: $(elem).offset().top - navHeight + 1
     }, 250);
   });
 
