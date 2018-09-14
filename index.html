@@ -7,8 +7,9 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
   <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:300' rel='stylesheet'>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="./libs/wallop/wallop.css">
+  <link rel="stylesheet" href="./libs/wallop/wallop--slide.css">
   <link rel='stylesheet' type='text/css' href='./styles/main.css'>
 </head>
 
@@ -33,36 +34,84 @@
   <section id='work'>
     <h2>Work</h2>
     <div class='container'>
-      <div class='work-item'>
-        <div><img src='./images/stargazing_preview.jpg' alt=''></div>
+      <div id='stargazing' class='work-item'>
+        <div><img class='work-preview-image' src='./images/stargazing_preview.jpg' alt=''></div>
         <div class='work-item-content'>
           <h3>Stargazing App</h3>
           <p>The stargazing app is a cross platform application that aims to share the stories and legends that have been told about the stars. It was built using Unity, and allows the user to look around the night sky using their phone or tablet and learn about constellations from the perspectives of many cultures.</p>
-          <div class='outline-button-dark'>More</div>
+          <div class='open-modal-button outline-button-dark'>More</div>
         </div>
         <div class='modal'>
+          <div class='modal-pane'>
+            <div class='Wallop Wallop--slide'>
+              <div class='Wallop-list'>
+                <div class='Wallop-item'><img src='./images/stargazing_preview.jpg' alt=''></div>
+                <div class='Wallop-item'><img src='./images/stargazing_preview.jpg' alt=''></div>
+              </div>
+              <div class='Wallop-button Wallop-buttonPrevious'><i class='fas fa-chevron-left'></i></div>
+              <div class='Wallop-button Wallop-buttonNext'><i class='fas fa-chevron-right'></i></div>
+            </div>
+            <div class='modal-content'>
+              <h4>Stargazing App</h4>
+              <div class='description-list'>
+              </div>
+              <div class='close-modal-button outline-button-dark'>Close</div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class='work-item'>
-        <div><img src='./images/shader_preview.jpg' alt=''></div>
+      <div id='shader' class='work-item'>
+        <div><img class='work-preview-image' src='./images/shader_preview.jpg' alt=''></div>
         <div class='work-item-content'>
           <h3>Snow Accumulation Shader</h3>
           <p>For my term project in Graphics 2, I created a surface shader for Unity to simulate snow accumulation. Snow in video games is usually accomplished by either using a pre-modelled snow mesh, or by adding a flat snow shader to existing models, resulting in snow that cannot be affected by changes in weather. By allowing the depth and accumulation direction to vary depending on the weather, I created snow that is more dynamic and interesting than static meshes.</p>
-          <div class='outline-button-dark'>More</div>
+          <div class='open-modal-button outline-button-dark'>More</div>
         </div>
         <div class='modal'>
+          <div class='modal-pane'>
+            <div class='Wallop Wallop--slide'>
+              <div class='Wallop-list'>
+                <div class='Wallop-item'><img src='./images/shader_preview.jpg' alt=''></div>
+                <div class='Wallop-item'><img src='./images/shader_preview.jpg' alt=''></div>
+              </div>
+              <div class='Wallop-button Wallop-buttonPrevious'><i class='fas fa-chevron-left'></i></div>
+              <div class='Wallop-button Wallop-buttonNext'><i class='fas fa-chevron-right'></i></div>
+            </div>
+            <div class='modal-content'>
+              <h4>Snow Accumulation Shader</h4>
+              <div class='description-list'>
+              </div>
+              <div class='close-modal-button outline-button-dark'>Close</div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class='work-item'>
-        <div><img src='./images/bejeweller_preview.jpg' alt=''></div>
+      <div id='bejeweller' class='work-item'>
+        <div><img class='work-preview-image' src='./images/bejeweller_preview.jpg' alt=''></div>
         <div class='work-item-content'>
           <h3>Bejeweller</h3>
           <p>The Bejeweller is a Java Swing application that plays Bejewelled 3 by scanning the game board and using the mouse to perform moves. It can play a number of game modes effectively, and has exceeded my highest scores by far.</p>
-          <div class='outline-button-dark'>More</div>
+          <div class='open-modal-button outline-button-dark'>More</div>
         </div>
         <div class='modal'>
+          <div class='modal-pane'>
+            <div class='Wallop Wallop--slide'>
+              <div class='Wallop-list'>
+                <div class='Wallop-item'><img src='./images/bejeweller_preview.jpg' alt=''></div>
+                <div class='Wallop-item'><img src='./images/bejeweller_preview.jpg' alt=''></div>
+              </div>
+              <div class='Wallop-button Wallop-buttonPrevious'><i class='fas fa-chevron-left'></i></div>
+              <div class='Wallop-button Wallop-buttonNext'><i class='fas fa-chevron-right'></i></div>
+            </div>
+            <div class='modal-content'>
+              <h4>Bejeweller</h4>
+              <div class='description-list'>
+              </div>
+              <div class='close-modal-button outline-button-dark'>Close</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -83,7 +132,8 @@
   </footer>
 
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-  <script src='./libs/particles.js/particles.min.js'></script>
+  <script src='./libs/particles/particles.min.js'></script>
+  <script src='./libs/wallop/Wallop.min.js'></script>
   <script src='./scripts/index.js'></script>
 </body>
 

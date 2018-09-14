@@ -50,11 +50,39 @@ $(function() {
     }, 250);
   });
 
-  $('.work-item .outline-button-dark').click(function(e) {
+  $('.open-modal-button').click(function(e) {
     $(this).closest('.work-item').children('.modal').fadeIn(250);
+    $('body').addClass('modal-open');
   });
 
+  function closeModal(modal) {
+    modal.fadeOut(250);
+    $('.Wallop-item--showNext').removeClass('Wallop-item--showNext');
+    $('.Wallop-item--hideNext').removeClass('Wallop-item--hideNext');
+    $('.Wallop-item--showPrevious').removeClass('Wallop-item--showPrevious');
+    $('.Wallop-item--hidePrevious').removeClass('Wallop-item--hidePrevious');
+    $('body').removeClass('modal-open');
+  }
+
   $('.modal').click(function(e) {
-    $(this).fadeOut(250);
+    closeModal($(this));
+  });
+
+  $('.close-modal-button').click(function(e) {
+    closeModal($(this).closest('.modal'));
+  });
+
+  $('.modal-pane').click(function(e) {
+    e.stopPropagation();
+  });
+
+  $('.Wallop').each(function(w) {
+    let wallop = new Wallop(this);
+
+    wallop.on('change', function(e) {
+      let index = e.detail.currentItemIndex;
+      $(e.target).parent().find('.description-list p').css('opacity', '0');
+      $(e.target).parent().find('.description-list p').eq(index).css('opacity', '1');
+    });
   });
 })
