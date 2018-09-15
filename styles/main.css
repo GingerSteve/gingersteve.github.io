@@ -199,9 +199,11 @@ p {
   transition: all 0.25s;
 }
 
-.outline-button-dark:hover {
-  color: #fefefe;
-  background-color: #212121;
+@media (hover: hover) {
+  .outline-button-dark:hover {
+    color: #fefefe;
+    background-color: #212121;
+  }
 }
 
 .work-item {
@@ -417,6 +419,7 @@ textarea {
 .ajax-button {
   position: relative;
   margin-top: 15px;
+  height: 34px;
   transition: all 0.3s ease;
 }
 
