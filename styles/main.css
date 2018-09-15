@@ -417,6 +417,7 @@ textarea {
 .ajax-button {
   position: relative;
   margin-top: 15px;
+  background-color: #fafafa;
   transition: all 0.3s ease;
 }
 
@@ -429,7 +430,7 @@ textarea {
   font-weight: 900;
   content: '\f00c';
   color: #333;
-  background-color: #fefefe;
+  background-color: inherit;
   position: absolute;
   top: 0px;
   bottom: 0px;
