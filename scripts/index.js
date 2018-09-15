@@ -89,18 +89,21 @@ $(function() {
   $('#contact-form').submit(function(e) {
     e.preventDefault();
     let button = $(this).children('.ajax-button');
+    button.prop('disabled', true);
+    button.addClass('loading');
+
     let json = $(this).serializeArray();
 
-    button.addClass('loading');
-    setTimeout(function() {
-      button.removeClass('loading');
-      button.addClass('success');
-    }, 1000);
+    // Do stuff here
+
+    button.removeClass('loading');
+    button.addClass('success');
 
     setTimeout(function() {
       button.removeClass('success');
-    }, 3000);
+    }, 1000);
 
+    button.prop('disabled', false);
     button.blur();
   })
 })

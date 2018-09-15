@@ -65,12 +65,12 @@ nav a:visited {
 }
 
 nav a.active {
-  color: #a2a2a2;
+  color: #ff9c00;
 }
 
 @media (hover: hover) {
   nav a:hover {
-    color: #a2a2a2;
+    color: #ff9c00;
   }
 }
 
@@ -109,7 +109,7 @@ footer a:visited {
 }
 
 footer a:hover {
-  color: #a2a2a2;
+  color: #ff9c00;
 }
 
 h1 {
@@ -224,6 +224,11 @@ p {
 }
 
 @media (min-width: 1000px) {
+  .section-description {
+    max-width: 1000px;
+    width: 100%;
+  }
+
   .work-preview-image {
     display: block;
     width: 400px;
@@ -243,6 +248,11 @@ p {
 }
 
 @media (max-width: 999px) {
+  .section-description {
+    margin: auto;
+    max-width: 800px;
+  }
+
   .about-content {
     flex-direction: column;
   }
