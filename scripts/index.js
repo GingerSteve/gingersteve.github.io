@@ -85,4 +85,22 @@ $(function() {
       $(e.target).parent().find('.description-list p').eq(index).css('opacity', '1');
     });
   });
+
+  $('#contact-form').submit(function(e) {
+    e.preventDefault();
+    let button = $(this).children('.ajax-button');
+    let json = $(this).serializeArray();
+
+    button.addClass('loading');
+    setTimeout(function() {
+      button.removeClass('loading');
+      button.addClass('success');
+    }, 1000);
+
+    setTimeout(function() {
+      button.removeClass('success');
+    }, 3000);
+
+    button.blur();
+  })
 })

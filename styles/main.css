@@ -189,6 +189,9 @@ p {
 
 .outline-button-dark {
   color: #212121;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
   border: 2px solid #212121;
   line-height: 30px;
   padding: 0px 30px;
@@ -276,6 +279,7 @@ p {
   left: 0px;
   right: 0px;
   background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
 }
 
 .close-modal-button {
@@ -386,4 +390,90 @@ p {
 .Wallop-item img {
   width: 100%;
   border-bottom: 4px solid #212121;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin: 2px;
+  padding: 5px;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.ajax-button {
+  position: relative;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.ajax-button.success {
+  color: transparent;
+}
+
+.ajax-button.success::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f00c';
+  color: #333;
+  background-color: #fefefe;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  transition: all 0.3s ease;
+}
+
+/* Inspired by https://codepen.io/sfaisal/pen/rVWBXp/ */
+
+.ajax-button.loading {
+  font-size: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 17px;
+  padding: 0;
+  border: 3px solid #000;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.0);
+  border-left: 3px solid rgba(255, 255, 255, 0.0);
+  background-color: transparent !important;
+  animation-name: rotateAnimation;
+  -webkit-animation-name: wk-rotateAnimation;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes wk-rotateAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
