@@ -92,16 +92,36 @@ $(function() {
     button.prop('disabled', true);
     button.addClass('loading');
 
-    let json = $(this).serializeArray();
+    let array = $(this).serializeArray();
+    let json = {};
+    array.forEach(i => {
+      json[i.name] = i.value;
+    });
 
-    // Do stuff here
 
-    button.removeClass('loading');
-    button.addClass('success');
+    var request = $.ajax({
+      url: 'https://prt2rnb72i.execute-api.us-west-2.amazonaws.com/default/contact',
+      method: 'POST',
+      data: JSON.stringify(json),
+      dataType: 'json',
+    });
 
-    setTimeout(function() {
-      button.removeClass('success');
-    }, 1000);
+    request.done(function(resp) {
+      console.log('Success!  ' + resp);
+
+      button.removeClass('loading');
+      button.addClass('success');
+
+      setTimeout(function() {
+        button.removeClass('success');
+      }, 1000);
+    });
+
+    request.fail(function(jqXHR, textStatus) {
+      console.log('Request failed: ' + textStatus);
+
+      button.removeClass('loading');
+    });
 
     button.prop('disabled', false);
     button.blur();
