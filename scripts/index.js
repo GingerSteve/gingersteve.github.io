@@ -98,32 +98,28 @@ $(function() {
       json[i.name] = i.value;
     });
 
-
     var request = $.ajax({
       url: 'https://prt2rnb72i.execute-api.us-west-2.amazonaws.com/default/contact',
       method: 'POST',
       data: JSON.stringify(json),
-      dataType: 'json',
     });
 
     request.done(function(resp) {
-      console.log('Success!  ' + resp);
-
       button.removeClass('loading');
       button.addClass('success');
 
       setTimeout(function() {
         button.removeClass('success');
-      }, 1000);
+        button.prop('disabled', false);
+      }, 2000);
     });
 
     request.fail(function(jqXHR, textStatus) {
-      console.log('Request failed: ' + textStatus);
-
       button.removeClass('loading');
+      button.prop('disabled', false);
+      alert('There was an issue sending your message, please try again later.');
     });
 
-    button.prop('disabled', false);
     button.blur();
   })
 })
