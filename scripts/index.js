@@ -81,8 +81,8 @@ $(function() {
 
     wallop.on('change', function(e) {
       let index = e.detail.currentItemIndex;
-      $(e.target).parent().find('.description-list p').css('opacity', '0');
-      $(e.target).parent().find('.description-list p').eq(index).css('opacity', '1');
+      $(e.target).parent().find('.description-list p').hide();
+      $(e.target).parent().find('.description-list p').eq(index).show();
     });
   });
 
