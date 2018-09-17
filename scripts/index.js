@@ -51,11 +51,22 @@ $(function() {
   });
 
   $('.open-modal-button').click(function(e) {
-    $(this).closest('.work-item').children('.modal').fadeIn(250);
+    let modal = $(this).closest('.work-item').children('.modal');
+    modal.fadeIn(250);
     $('body').addClass('modal-open');
+
+    // If the modal contains an iframe, autoplay
+    let video = modal.find('iframe')[0];
+    if (video)
+      video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
   });
 
   function closeModal(modal) {
+    // If the modal contains an iframe, pause it before exiting
+    let video = modal.find('iframe')[0];
+    if (video)
+      video.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+
     modal.fadeOut(250);
     $('.Wallop-item--showNext').removeClass('Wallop-item--showNext');
     $('.Wallop-item--hideNext').removeClass('Wallop-item--hideNext');
