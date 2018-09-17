@@ -132,8 +132,20 @@ h2::after {
   margin: 10px auto;
 }
 
-h3, h4 {
+h3 {
+  margin: 0px 0px 10px 0px;
+}
+
+h4 {
   margin: 0px 0px 20px 0px;
+}
+
+h5 {
+  font-size: 12pt;
+  font-style: italic;
+  font-weight: 400;
+  color: #888;
+  margin: 0px 0px 10px 0px;
 }
 
 p {
@@ -234,7 +246,8 @@ p {
     width: 400px;
   }
 
-  .work-item h3 {
+  .work-item h3,
+  .work-item h5 {
     align-self: flex-start;
   }
 
