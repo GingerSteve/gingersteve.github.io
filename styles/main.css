@@ -138,7 +138,7 @@ h3 {
 
 h4 {
   font-size: 14pt;
-  margin: 0px 0px 20px 0px;
+  margin: 10px 0px;
 }
 
 h5 {
@@ -147,10 +147,6 @@ h5 {
   font-weight: 400;
   color: #888;
   margin: 0px 0px 10px 0px;
-}
-
-p {
-  margin: 0;
 }
 
 #particles-js {
@@ -185,10 +181,6 @@ p {
 .about-text {
   flex: 1;
   margin: 0px 40px;
-}
-
-.about-text p {
-  margin: 5px 0px;
 }
 
 .container {
@@ -343,14 +335,19 @@ p {
   flex: 1 0 auto;
 }
 
-.description-list,
-.description-container {
+.description-list {
+  position: relative;
   width: 100%;
   flex: 1 0 auto;
 }
 
-.description-container p {
-  margin-bottom: 5px;
+.description-list div {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  transition: all 250ms;
 }
 
 .close-modal-button {
