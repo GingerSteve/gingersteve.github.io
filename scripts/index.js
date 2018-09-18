@@ -62,10 +62,10 @@ $(function() {
   });
 
   function closeModal(modal) {
-    // If the modal contains an iframe, pause it before exiting
+    // If the modal contains an iframe, stop it before exiting
     let video = modal.find('iframe')[0];
     if (video)
-      video.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+      video.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
 
     modal.fadeOut(250);
     $('.Wallop-item--showNext').removeClass('Wallop-item--showNext');
