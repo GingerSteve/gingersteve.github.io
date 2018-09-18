@@ -93,8 +93,8 @@ $(function() {
     wallop.on('change', function(e) {
       let index = e.detail.currentItemIndex;
       let descId = $(e.target).find('img').eq(index).data('desc-id');
-      $(e.target).parent().find('.description-list>div').css('opacity', '0');
-      $(e.target).parent().find('.description-list [data-desc-id="' + descId + '"]').css('opacity', '1');
+      $(e.target).parent().find('.description-list>div').hide();
+      $(e.target).parent().find('.description-list [data-desc-id="' + descId + '"]').show();
     });
   });
 

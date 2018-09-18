@@ -336,18 +336,8 @@ h5 {
 }
 
 .description-list {
-  position: relative;
   width: 100%;
   flex: 1 0 auto;
-}
-
-.description-list div {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  transition: all 250ms;
 }
 
 .close-modal-button {
