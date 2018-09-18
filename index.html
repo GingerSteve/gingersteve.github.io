@@ -9,7 +9,7 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:300' rel='stylesheet'>
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css' integrity='sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU' crossorigin="anonymous">
   <link rel="stylesheet" href="./libs/wallop/wallop.css">
-  <link rel="stylesheet" href="./libs/wallop/wallop--slide.css">
+  <link rel="stylesheet" href="./libs/wallop/wallop--fade.css">
   <link rel='stylesheet' type='text/css' href='./styles/main.css'>
   <link rel='icon' type='image/png' href='./images/favicon.png'>
 </head>
@@ -50,19 +50,24 @@
     <div class='container'>
       <p class='section-description'>This is a selection of my freelance work and personal projects. For my full work experience, please see my <a href='https://www.linkedin.com/in/thestevemarshall/'>LinkedIn profile.</a></p>
       <div id='stargazing' class='work-item'>
-        <div><img class='work-preview-image' src='./images/stargazing_preview.jpg' alt=''></div>
+        <div><img class='work-preview-image' src='./images/stargazing-app/stargazing_preview.png' alt=''></div>
         <div class='work-item-content'>
           <h3>Stargazing App</h3>
           <h5>Unity</h5>
-          <p>The stargazing app is a cross platform application that aims to share the stories and legends that have been told about the stars. It was built using Unity, and allows the user to look around the night sky using their phone or tablet and learn about constellations from the perspectives of many cultures.</p>
+          <p>
+            The stargazing app is a cross-platform mobile and desktop application that aims to share the legends and stories of the night sky from the perspectives of many cultures, beyond the 88 modern constellations established by the International Astronomical Union.
+          </p>
           <div class='open-modal-button outline-button-dark'>More</div>
         </div>
         <div class='modal'>
           <div class='modal-pane'>
-            <div class='Wallop Wallop--slide'>
+            <div class='Wallop Wallop--fade'>
               <div class='Wallop-list'>
-                <div class='Wallop-item'><img src='./images/stargazing_preview.jpg' alt=''></div>
-                <div class='Wallop-item'><img src='./images/stargazing_preview.jpg' alt=''></div>
+                <div class='Wallop-item'><img src='./images/stargazing-app/stargazing_1.png' alt='' data-desc-index='0'></div>
+                <div class='Wallop-item'><img src='./images/stargazing-app/stargazing_2.png' alt='' data-desc-index='0'></div>
+                <div class='Wallop-item'><img src='./images/stargazing-app/stargazing_3.png' alt='' data-desc-index='1'></div>
+                <div class='Wallop-item'><img src='./images/stargazing-app/stargazing_4.png' alt='' data-desc-index='2'></div>
+                <div class='Wallop-item'><img src='./images/stargazing-app/stargazing_5.png' alt='' data-desc-index='2'></div>
               </div>
               <div class='Wallop-button Wallop-buttonPrevious'><i class='fas fa-chevron-left'></i></div>
               <div class='Wallop-button Wallop-buttonNext'><i class='fas fa-chevron-right'></i></div>
@@ -70,6 +75,17 @@
             <div class='modal-content'>
               <h4>Stargazing App</h4>
               <div class='description-list'>
+                <p>
+                  The stargazing app is being developed in partnership with the University of Manitoba, as part of the STEAM (Science, Technology, Engineering, Art, and Math) initiative.<br>
+                  The goal of the app is to preserve legends about the stars from around the world, and to share folklore that isn't as well-known as that of Greek and Roman mythology.
+                </p>
+                <p>
+                  Users can click on any constellation to get more information and read stories about the constellation.<br>
+                  In the future, these pages will include more pictures and artwork, and may include recordings of storytellers sharing legends about the constellation, in an effort to preserve traditional oral storytelling.
+                </p>
+                <p>
+                  The app fetches around 5000 stars from a database to display on a virtual celestial sphere. It draws lines between the stars to show constellations for the currently selected culture, and generates an invisible mesh around each constellation, allowing users to click on them.
+                </p>
               </div>
               <div class='close-modal-button outline-button-dark'>Close</div>
             </div>
@@ -78,19 +94,21 @@
       </div>
 
       <div id='shader' class='work-item'>
-        <div><img class='work-preview-image' src='./images/shader_preview.jpg' alt=''></div>
+        <div><img class='work-preview-image' src='./images/shader/shader_preview.jpg' alt=''></div>
         <div class='work-item-content'>
           <h3>Snow Accumulation Shader</h3>
           <h5>Unity</h5>
-          <p>For my term project in Graphics 2, I created a surface shader for Unity to simulate snow accumulation. Snow in video games is usually accomplished by either using a pre-modelled snow mesh, or by adding a flat snow shader to existing models, resulting in snow that cannot be affected by changes in weather. By allowing the depth and accumulation direction to vary depending on the weather, I created snow that is more dynamic and interesting than static meshes.</p>
+          <p>
+            For my term project in Graphics 2, I created a surface shader for Unity to simulate snow accumulation. Snow in video games is usually made using either a pre-modelled snow mesh or a flat snow shader, resulting in snow that isn't affected by changes in weather. By allowing the depth and accumulation direction to vary depending on the weather, I created snow that is more dynamic and interesting than either of those methods.
+          </p>
           <div class='open-modal-button outline-button-dark'>More</div>
         </div>
         <div class='modal'>
           <div class='modal-pane'>
-            <div class='Wallop Wallop--slide'>
+            <div class='Wallop Wallop--fade'>
               <div class='Wallop-list'>
-                <div class='Wallop-item'><img src='./images/shader_preview.jpg' alt=''></div>
-                <div class='Wallop-item'><img src='./images/shader_preview.jpg' alt=''></div>
+                <div class='Wallop-item'><img src='./images/shader/shader_preview.jpg' alt=''></div>
+                <div class='Wallop-item'><img src='./images/shader/shader_preview.jpg' alt=''></div>
               </div>
               <div class='Wallop-button Wallop-buttonPrevious'><i class='fas fa-chevron-left'></i></div>
               <div class='Wallop-button Wallop-buttonNext'><i class='fas fa-chevron-right'></i></div>
@@ -98,7 +116,8 @@
             <div class='modal-content'>
               <h4>Snow Accumulation Shader</h4>
               <div class='description-list'>
-                <p>Test</p>
+                <p>
+                </p>
               </div>
               <div class='close-modal-button outline-button-dark'>Close</div>
             </div>
@@ -107,7 +126,7 @@
       </div>
 
       <div id='bejeweller' class='work-item'>
-        <div><img class='work-preview-image' src='./images/bejeweller_preview.jpg' alt=''></div>
+        <div><img class='work-preview-image' src='./images/bejeweller/bejeweller_preview.jpg' alt=''></div>
         <div class='work-item-content'>
           <h3>Bejeweller</h3>
           <h5>Java</h5>

@@ -137,6 +137,7 @@ h3 {
 }
 
 h4 {
+  font-size: 14pt;
   margin: 0px 0px 20px 0px;
 }
 
@@ -365,6 +366,7 @@ p {
   bottom: 0px;
   font-size: 28px;
   cursor: pointer;
+  z-index: 5;
 
   color: rgba(255, 255, 255, 0.5);
   transition: all 0.25s;
@@ -401,15 +403,25 @@ p {
   border-radius: 10px 0px 0px 10px;
 }
 
+.Wallop-item {
+  padding-bottom: 56.25%;
+  border-bottom: 4px solid #181818;
+}
+
 .Wallop-item img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   width: 100%;
-  border-bottom: 4px solid #212121;
+  height: 100%;
+  background-color: #212121;
+  object-fit: contain;
 }
 
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%;
-  border-bottom: 4px solid #212121;
+  border-bottom: 4px solid #181818;
 }
 
 .video-wrapper iframe {
