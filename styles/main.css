@@ -340,6 +340,11 @@ h5 {
   flex: 1 0 auto;
 }
 
+.image-desc {
+  display: block;
+  margin: 1em 0em 1.5em 0em;
+}
+
 .close-modal-button {
   margin-top: 20px;
 }
