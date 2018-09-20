@@ -54,7 +54,6 @@ nav.fixed {
 
 nav a {
   margin: 0px 25px;
-  transition: color .25s;
   text-decoration: none;
   color: inherit;
   transition: color 0.25s;
