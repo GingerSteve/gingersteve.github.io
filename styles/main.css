@@ -221,7 +221,11 @@ h2::after {
   margin-bottom: 20px;
 }
 
-.open-modal-button {
+.project-gallery {
+  display: none;
+}
+
+.project-details .outline-button-dark {
   margin-top: auto;
   align-self: center;
 }

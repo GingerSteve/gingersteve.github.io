@@ -50,7 +50,29 @@ $(function() {
     }, 250);
   });
 
-  $('.open-modal-button').click(function(e) {
+  $('.open-photoswipe-button').click(function(e) {
+    let pswpElement = $('.pswp')[0];
+    let items = [];
+
+    $(e.target).siblings('.project-gallery').eq(0).children().each(function() {
+      let img = $(this);
+      items.push({
+        src: img.attr('src'),
+        w: img.data('width'),
+        h: img.data('height'),
+        title: img.data('description')
+      });
+    });
+
+    let options = {
+      index: 0,
+      showHideOpacity: true
+    };
+    let gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+    gallery.init();
+  });
+
+  $('.open-video-button').click(function(e) {
     let modal = $(this).closest('.work-item').children('.modal');
     modal.fadeIn(250);
     $('body').addClass('modal-open');
@@ -68,10 +90,6 @@ $(function() {
       video.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
 
     modal.fadeOut(250);
-    $('.Wallop-item--showNext').removeClass('Wallop-item--showNext');
-    $('.Wallop-item--hideNext').removeClass('Wallop-item--hideNext');
-    $('.Wallop-item--showPrevious').removeClass('Wallop-item--showPrevious');
-    $('.Wallop-item--hidePrevious').removeClass('Wallop-item--hidePrevious');
     $('body').removeClass('modal-open');
   }
 
@@ -85,17 +103,6 @@ $(function() {
 
   $('.modal-pane').click(function(e) {
     e.stopPropagation();
-  });
-
-  $('.Wallop').each(function(w) {
-    let wallop = new Wallop(this);
-
-    wallop.on('change', function(e) {
-      let index = e.detail.currentItemIndex;
-      let descId = $(e.target).find('img').eq(index).data('desc-id');
-      $(e.target).parent().find('.description-list>div').hide();
-      $(e.target).parent().find('.description-list [data-desc-id="' + descId + '"]').show();
-    });
   });
 
   $('#contact-form').submit(function(e) {

@@ -9,8 +9,8 @@
 
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto+Slab:300' rel='stylesheet'>
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css' integrity='sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU' crossorigin="anonymous">
-  <link rel='stylesheet' href='./libs/wallop/wallop.css'>
-  <link rel='stylesheet' href='./libs/wallop/wallop--fade.css'>
+  <link rel='stylesheet' href='./libs/photoswipe/photoswipe.css'>
+  <link rel='stylesheet' href='./libs/photoswipe/default-skin/default-skin.css'>
   <link rel='stylesheet' type='text/css' href='./styles/main.css'>
   <link rel='icon' type='image/png' href='./images/favicon.png'>
 </head>
@@ -52,7 +52,12 @@
           <div class='project-title'>Stargazing App</div>
           <div class='project-subtitle'>Unity</div>
           <div class='project-description'>The stargazing app is a cross-platform mobile and desktop application that aims to share the stories and legends told about the stars from the perspectives of many cultures, beyond the IAU's 88 modern constellations.</div>
-          <div class='open-modal-button outline-button-dark'>More</div>
+          <div class='open-photoswipe-button outline-button-dark'>More</div>
+          <div class='project-gallery'>
+            <img src='https://placekitten.com/600/400' data-height='400' data-width='600' data-description=''>
+            <img src='https://placekitten.com/500/400' data-height='400' data-width='500' data-description=''>
+            <img src='https://placekitten.com/500/500' data-height='500' data-width='500' data-description=''>
+          </div>
         </div>
       </div>
 
@@ -62,7 +67,12 @@
           <div class='project-title'>Snow Accumulation Shader</div>
           <div class='project-subtitle'>Unity</div>
           <div class='project-description'>For my term project in Graphics 2, I created a surface shader for Unity to simulate snow accumulation. Snow in video games is usually made using either a pre-modelled snow mesh or a flat snow shader, resulting in snow that isn't affected by changes in weather. By allowing the depth and accumulation direction to vary depending on the weather, I created snow that is more dynamic and interesting than either of those methods.</div>
-          <div class='open-modal-button outline-button-dark'>More</div>
+          <div class='open-photoswipe-button outline-button-dark'>More</div>
+          <div class='project-gallery'>
+            <img src='https://placekitten.com/700/800' data-height='800' data-width='700' data-description='First picture'>
+            <img src='https://placekitten.com/750/600' data-height='600' data-width='750' data-description='Second picture.<br><strong>Second line with strong text</strong>'>
+            <img src='https://placekitten.com/800/900' data-height='900' data-width='800' data-description='Third picture.<br><small>Second line with small text.</small>'>
+          </div>
         </div>
       </div>
 
@@ -98,9 +108,40 @@
     </a>
   </footer>
 
+  <!-- Photoswipe -->
+  <div class='pswp' tabindex='-1' role='dialog' aria-hidden='true'>
+    <div class='pswp__bg'></div>
+    <div class='pswp__scroll-wrap'>
+      <div class='pswp__container'>
+        <div class='pswp__item'></div>
+        <div class='pswp__item'></div>
+        <div class='pswp__item'></div>
+      </div>
+      <div class='pswp__ui pswp__ui--hidden'>
+        <div class='pswp__top-bar'>
+          <div class='pswp__counter'></div>
+          <button class='pswp__button pswp__button--close' title='Close (Esc)'></button>
+          <div class='pswp__preloader'>
+            <div class='pswp__preloader__icn'>
+              <div class='pswp__preloader__cut'>
+                <div class='pswp__preloader__donut'></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class='pswp__button pswp__button--arrow--left' title='Previous (arrow left)'></button>
+        <button class='pswp__button pswp__button--arrow--right' title='Next (arrow right)'></button>
+        <div class='pswp__caption'>
+          <div class='pswp__caption__center'></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script src='./libs/particles/particles.min.js'></script>
-  <script src='./libs/wallop/Wallop.min.js'></script>
+  <script src='./libs/photoswipe/photoswipe.min.js'></script>
+  <script src='./libs/photoswipe/photoswipe-ui-default.min.js'></script>
   <script src='./scripts/index.js'></script>
 </body>
 
