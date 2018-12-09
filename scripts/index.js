@@ -66,7 +66,10 @@ $(function() {
 
     let options = {
       index: 0,
-      showHideOpacity: true
+      showHideOpacity: true,
+      getThumbBoundsFn: function(index) {
+        return {x: $(window).width() / 2, y: $(window).height() / 2 + pageYScroll, w: 0};
+      }
     };
     let gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
     gallery.init();
