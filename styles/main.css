@@ -225,6 +225,16 @@ h2::after {
   display: none;
 }
 
+.pswp iframe {
+  width: 100%;
+  height: 100%;
+  padding-top: 44px;
+}
+
+.pswp__ui--idle .pswp__top-bar {
+  opacity: 1;
+}
+
 .project-details .outline-button-dark {
   margin-top: auto;
   align-self: center;

@@ -54,7 +54,7 @@ $(function() {
     let pswpElement = $('.pswp')[0];
     let items = [];
 
-    $(e.target).siblings('.project-gallery').eq(0).children().each(function() {
+    $(this).siblings('.project-gallery').eq(0).children().each(function() {
       let img = $(this);
       items.push({
         src: img.attr('src'),
@@ -65,9 +65,9 @@ $(function() {
     });
 
     let options = {
-      index: 0,
       showHideOpacity: true,
       getThumbBoundsFn: function(index) {
+        let pageYScroll = window.pageYOffset || document.documentElement.scrollTop;
         return {x: $(window).width() / 2, y: $(window).height() / 2 + pageYScroll, w: 0};
       }
     };
@@ -76,36 +76,33 @@ $(function() {
   });
 
   $('.open-video-button').click(function(e) {
-    let modal = $(this).closest('.work-item').children('.modal');
-    modal.fadeIn(250);
-    $('body').addClass('modal-open');
+    let pswpElement = $('.pswp')[0];
+    let src = $(this).siblings('.project-video').eq(0).data('src');
 
-    // If the modal contains an iframe, autoplay
-    let video = modal.find('iframe')[0];
-    if (video)
-      video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-  });
+    let items = [{
+      html: "<iframe src='" + src + "' frameborder='0' allowfullscreen></iframe>"
+    }];
 
-  function closeModal(modal) {
-    // If the modal contains an iframe, stop it before exiting
-    let video = modal.find('iframe')[0];
-    if (video)
-      video.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+    let options = {
+      tapToToggleControls: false,
+      closeOnVerticalDrag: false
+    };
+    let gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+    gallery.init();
 
-    modal.fadeOut(250);
-    $('body').removeClass('modal-open');
-  }
+    // Stop video when PhotoSwipe is closed
+    gallery.listen('close', function() {
+      let video = $('.pswp iframe')[0];
+      if (video)
+        video.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+    });
 
-  $('.modal').click(function(e) {
-    closeModal($(this));
-  });
-
-  $('.close-modal-button').click(function(e) {
-    closeModal($(this).closest('.modal'));
-  });
-
-  $('.modal-pane').click(function(e) {
-    e.stopPropagation();
+    // Autoplay video when PhotoSwipe open animation is done
+    setTimeout(function() {
+      let video = $('.pswp iframe')[0];
+      if (video)
+        video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    }, 500);
   });
 
   $('#contact-form').submit(function(e) {
