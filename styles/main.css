@@ -48,8 +48,16 @@ nav.fixed {
   top: 0px;
 }
 
+#nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+}
+
 nav a {
-  margin: 0px 25px;
   text-decoration: none;
   color: inherit;
   transition: color 0.25s;
@@ -186,11 +194,11 @@ h2::after {
   display: flex;
   width: 100%;
   padding: 40px 0px;
-  border-top: 1px solid #a2a2a2;
+  border-top: none;
 }
 
-.project-container:first-of-type {
-  border-top: none;
+.project-container~.project-container {
+  border-top: 1px solid #a2a2a2;
 }
 
 .project-preview {
@@ -296,6 +304,7 @@ form {
   align-items: center;
   max-width: 500px;
   width: 100%;
+  padding-bottom: 40px;
 }
 
 input,
@@ -328,7 +337,6 @@ textarea {
   font-weight: 900;
   content: '\f00c';
   color: #333;
-  background-color: #fafafa;
   position: absolute;
   top: 0px;
   bottom: 0px;
