@@ -229,6 +229,10 @@ h2::after {
   margin-bottom: 20px;
 }
 
+.project-description p:first-of-type {
+  margin-top: 0px;
+}
+
 .project-gallery {
   display: none;
 }

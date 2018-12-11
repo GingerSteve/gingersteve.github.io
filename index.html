@@ -23,9 +23,11 @@
       <span id='subtitle'>Software Developer, Maker</span>
     </div>
     <nav>
-      <a class='section-link' href='#about'>About</a>&#183;
-      <a class='section-link' href='#work'>Work</a>&#183;
-      <a class='section-link' href='#contact'>Contact</a>
+      <div id='nav-links'>
+        <a class='section-link' href='#about'>About</a>&#183;
+        <a class='section-link' href='#work'>Work</a>&#183;
+        <a class='section-link' href='#contact'>Contact</a>
+      </div>
     </nav>
   </header>
 
@@ -51,12 +53,16 @@
         <div class='project-details'>
           <div class='project-title'>Stargazing App</div>
           <div class='project-subtitle'>Unity</div>
-          <div class='project-description'>The stargazing app is a cross-platform mobile and desktop application that aims to share the stories and legends told about the stars from the perspectives of many cultures, beyond the IAU's 88 modern constellations.</div>
+          <div class='project-description'>
+            <p>The stargazing app is a cross-platform mobile and desktop app being developed for the University of Manitoba's STEAM initiative. Our aim is to preserve legends about the stars from around the world, and to share folklore that isn't as well-known as that of Greek and Roman mythology.</p>
+            <p>On mobile devices, the app can be controlled using the device gyroscope, allowing the user to point their phone at the night sky and learn about what they can see.</p>
+          </div>
           <div class='open-photoswipe-button outline-button-dark'>More</div>
           <div class='project-gallery'>
-            <img src='https://placekitten.com/600/400' data-height='400' data-width='600' data-description=''>
-            <img src='https://placekitten.com/500/400' data-height='400' data-width='500' data-description=''>
-            <img src='https://placekitten.com/500/500' data-height='500' data-width='500' data-description=''>
+            <img src='./images/stargazing-app/stargazing_1.png' data-width='1000' data-height='500' data-description='The constellation viewer.'>
+            <img src='./images/stargazing-app/stargazing_2.png' data-width='1000' data-height='500' data-description='The constellation viewer showing an Ojibwe constellation.'>
+            <img src='./images/stargazing-app/stargazing_3.png' data-width='1000' data-height='655' data-description='Users can click on any constellation to learn more about the legends it represents, and see related images and artwork.'>
+            <img src='./images/stargazing-app/stargazing_4.png' data-width='1000' data-height='542' data-description='The app uses position data for around 5000 stars to represent on a virtual celestial sphere.'>
           </div>
         </div>
       </div>
@@ -66,12 +72,14 @@
         <div class='project-details'>
           <div class='project-title'>Snow Accumulation Shader</div>
           <div class='project-subtitle'>Unity</div>
-          <div class='project-description'>For my term project in Graphics 2, I created a surface shader for Unity to simulate snow accumulation. Snow in video games is usually made using either a pre-modelled snow mesh or a flat snow shader, resulting in snow that isn't affected by changes in weather. By allowing the depth and accumulation direction to vary depending on the weather, I created snow that is more dynamic and interesting than either of those methods.</div>
+          <div class='project-description'>
+            For my term project in Graphics 2, I created a surface shader for Unity to simulate snow accumulation. Snow in video games is usually made using either a pre-modelled snow mesh or a flat snow shader, resulting in snow that isn't affected by changes in weather. By allowing the depth and accumulation direction to vary depending on the weather, I created snow that is more dynamic and interesting than either of those methods.
+          </div>
           <div class='open-photoswipe-button outline-button-dark'>More</div>
           <div class='project-gallery'>
-            <img src='https://placekitten.com/700/800' data-height='800' data-width='700' data-description='First picture'>
-            <img src='https://placekitten.com/750/600' data-height='600' data-width='750' data-description='Second picture.<br><strong>Second line with strong text</strong>'>
-            <img src='https://placekitten.com/800/900' data-height='900' data-width='800' data-description='Third picture.<br><small>Second line with small text.</small>'>
+            <img src='./images/shader/shader_preview.jpg' data-width='952' data-height='635' data-description=''>
+            <img src='./images/shader/om.jpg' data-width='1352' data-height='686' data-description=''>
+            <img src='./images/shader/covered_norms.jpg' data-width='1565' data-height='880' data-description=''>
           </div>
         </div>
       </div>
@@ -81,7 +89,9 @@
         <div class='project-details'>
           <div class='project-title'>Bejeweller</div>
           <div class='project-subtitle'>Java</div>
-          <div class='project-description'>The Bejeweller is a Java Swing application that plays Bejewelled 3. It interacts with the game in the same way a human player would – it scans the screen, detects the colour of each piece on the game board, and uses the mouse to perform a move. It can play a number of game modes effectively, and has exceeded my highest scores by far.</div>
+          <div class='project-description'>
+            The Bejeweller is a Java Swing application that uses simple colour recognition to play Bejweled 3. It interacts with the game in the same way a human player would—it scans the screen, detects the colour of each piece on the game board, and uses the mouse to perform a move. It can play a number of game modes effectively, and has exceeded my highest scores by far. In Lightning Mode, my highest score is 312500 points, and the program's best is 10628850!
+          </div>
           <div class='open-video-button outline-button-dark'>More</div>
           <div class='project-video' data-src='https://www.youtube-nocookie.com/embed/lxq_F6JCXWo?rel=0&mute=1&vq=hd1080&enablejsapi=1&version=3&playerapiid=ytplayer'></div>
         </div>
