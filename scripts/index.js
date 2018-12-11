@@ -65,6 +65,7 @@ $(function() {
     });
 
     let options = {
+      index: 0,
       showHideOpacity: true,
       getThumbBoundsFn: function(index) {
         let pageYScroll = window.pageYOffset || document.documentElement.scrollTop;
