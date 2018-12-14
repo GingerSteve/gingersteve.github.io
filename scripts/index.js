@@ -57,10 +57,10 @@ $(function() {
     $(this).siblings('.project-gallery').eq(0).children().each(function() {
       let img = $(this);
       items.push({
-        src: img.attr('src'),
+        src: img.data('src'),
         w: img.data('width'),
         h: img.data('height'),
-        title: img.data('description')
+        title: img.html()
       });
     });
 
