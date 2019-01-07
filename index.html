@@ -4,10 +4,13 @@
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130811207-1"></script>
   <script>
+    let params = (new URL(document.location)).searchParams;
+    if (params.get('tracking') == 'false')
+      window['ga-disable-UA-130811207-1'] = true;
+
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-130811207-1');
   </script>
 
