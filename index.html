@@ -4,10 +4,13 @@
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130811207-1"></script>
   <script>
+    let params = (new URL(document.location)).searchParams;
+    if (params.get('tracking') == 'false')
+      window['ga-disable-UA-130811207-1'] = true;
+
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-130811207-1');
   </script>
 
@@ -35,6 +38,7 @@
       <div id='nav-links'>
         <a class='section-link' href='#about'>About</a>&#183;
         <a class='section-link' href='#work'>Work</a>&#183;
+        <a class='section-link' href='#fun'>Fun</a>&#183;
         <a class='section-link' href='#contact'>Contact</a>
       </div>
     </nav>
@@ -63,7 +67,7 @@
           <div class='project-title'>Stargazing App</div>
           <div class='project-subtitle'>Unity</div>
           <div class='project-description'>
-            <p>The stargazing app is a cross-platform mobile and desktop app being developed for the University of Manitoba's STEAM initiative. Our aim is to preserve legends about the stars from around the world, and to share folklore that isn't as well-known as that of Greek and Roman mythology.</p>
+            <p>The stargazing app is a cross-platform mobile and desktop app in development for the University of Manitoba's STEAM initiative. Our aim is to preserve legends about the stars from around the world, and to share folklore that isn't as well-known as that of Greek and Roman mythology.</p>
             <p>On mobile devices, the app can be controlled using the device gyroscope, allowing the user to point their phone at the night sky and learn about what they can see.</p>
           </div>
           <div class='open-photoswipe-button outline-button-dark'>More</div>
@@ -75,10 +79,10 @@
               The constellation viewer showing an Ojibwe constellation.
             </div>
             <div data-src='./images/stargazing-app/stargazing_3.png' data-width='1000' data-height='655'>
-              Users can click on any constellation to learn more about the legends it represents, and see related images and artwork.
+              Users can click on any constellation to learn more about the legends it represents and see related images and artwork.
             </div>
             <div data-src='./images/stargazing-app/stargazing_4.png' data-width='1000' data-height='542'>
-              The app uses position data for around 5000 stars to represent on a virtual celestial sphere.
+              The app uses position data for around 5000 stars and displays them on a virtual celestial sphere.
             </div>
           </div>
         </div>
@@ -117,6 +121,131 @@
     </div>
   </section>
 
+  <section id='fun'>
+    <h2>Fun</h2>
+    <div class='flex-container'>
+      <div class-'section-description'>
+        <!-- TODO -->
+      </div>
+
+      <div id='puzzles' class='project-container'>
+        <img class='project-preview' src='./images/puzzles/puzzles_preview.jpg' alt=''>
+        <div class='project-details'>
+          <div class='project-title'>Puzzles</div>
+          <div class='project-description'>
+            After solving a Rubik's cube for the first time, I discovered a love for puzzle solving, and started collecting mechanical puzzles. Inspired by Tony Fisher and Oscar Van Deventer's creations, I developed my own puzzle designs, and created a number of new hand-made and 3D printed puzzles.
+          </div>
+          <div class='open-photoswipe-button outline-button-dark'>More</div>
+          <div class='project-gallery'>
+            <div data-src='./images/puzzles/shapes_1.jpg' data-width='1200' data-height='800'>
+              <strong>Shapes Puzzle:</strong> A 3x3x3 Rubik's cube which is solved by lining up shapes cut through each edge instead of matching colours on each face. The puzzle provides a unique challenge with some special cases that don't occur on a normal Rubik's cube.
+            </div>
+            <div data-src='./images/puzzles/shapes_2.jpg' data-width='1200' data-height='800'>
+              <strong>Shapes Puzzle:</strong> Turning.
+            </div>
+            <div data-src='./images/puzzles/burr_1.jpg' data-width='1200' data-height='800'>
+              <strong>Twisty Burr:</strong> A combination between a "twisty puzzle" (or combination puzzle) and a burr puzzle. The internal 2x2x2 cube can only be solved using the surrounding burr puzzle as a guide.
+            </div>
+            <div data-src='./images/puzzles/burr_2.jpg' data-width='1200' data-height='800'>
+              <strong>Twisty Burr:</strong> The solved 2x2x2 and burr puzzles separated.
+            </div>
+            <div data-src='./images/puzzles/burr_3.jpg' data-width='1200' data-height='800'>
+              <strong>Twisty Burr:</strong> Both puzzles scrambled.
+            </div>
+            <div data-src='./images/puzzles/123_1.jpg' data-width='1200' data-height='800'>
+              <strong>Micro 1x2x3:</strong> The smallest 1x2x3 cuboid puzzle ever made, measuring only 18mm across the longest edge.
+            </div>
+            <div data-src='./images/puzzles/123_2.jpg' data-width='1200' data-height='800'>
+              <strong>Micro 1x2x3:</strong> The smallest 1x2x3 cuboid puzzle ever made, measuring only 18mm across the longest edge.
+            </div>
+            <div data-src='./images/puzzles/cross_cube.jpg' data-width='1200' data-height='800'>
+              <strong>Junior Cross Cube:</strong> A hand-made modification based on a 2x2x2 Rubik's Cube.
+            </div>
+            <div data-src='./images/puzzles/siamese.jpg' data-width='1200' data-height='800'>
+              <strong>Bi-Colour Siamese Cube:</strong> A hand-made modification fusing two 3x3x3 Rubik's Cubes together, with a sticker arrangement that provides a new challenge.
+            </div>
+            <div data-src='./images/puzzles/axis_1.jpg' data-width='1200' data-height='800'>
+              <strong>Mini Axis Cube:</strong> A shape modification of a 3x3x3 Rubik's cube. This puzzle is only 30mm across each edge!
+            </div>
+            <div data-src='./images/puzzles/axis_2.jpg' data-width='1200' data-height='800'>
+              <strong>Mini Axis Cube:</strong> Scambled.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id='shapeways' class='project-container'>
+        <img class='project-preview' src='./images/shapeways/shapeways_preview.jpg' alt=''>
+        <div class='project-details'>
+          <div class='project-title'>3D Printing</div>
+          <div class='project-description'>
+            I started experimenting with 3D printing as a method of making new puzzles, and was fascinated by the technology. I discovered a passion for making things, and loved how 3D printing allowed me to make something from my imagination into a real object. I designed jewellery, ornaments, and other knick-knacks for <a href='https://www.shapeways.com/designer/stuffbysteve/creations'>my Shapeways shop</a>, which I ran for some additional income during university.
+          </div>
+          <div class='open-photoswipe-button outline-button-dark'>More</div>
+          <div class='project-gallery'>
+            <div data-src='./images/shapeways/pendant.jpg' data-width='2000' data-height='1500'>
+              <strong>Lise's Pendant:</strong> An anniversary pendant using the couple's initials.<br>
+              <small>Materials: Silver</small>
+            </div>
+            <div data-src='./images/shapeways/snowflake.jpg' data-width='2000' data-height='1500'>
+              <strong>Snowflake Ornament:</strong> This was one of the first Christmas ornaments available on Shapeways, and continues to be one of the most popular.<br>
+              <small>Materials: White nylon plastic</small>
+            </div>
+            <div data-src='./images/shapeways/treble_ring.jpg' data-width='2000' data-height='1500'>
+              <strong>Treble Clef Ring 2</strong><br>
+              <small>Materials: Gold plated steel</small>
+            </div>
+            <div data-src='./images/shapeways/rings.jpg' data-width='2000' data-height='1500'>
+              <strong>Bass and Treble Clef Rings</strong><br>
+              <small>Materials: Plated steel</small>
+            </div>
+            <div data-src='./images/shapeways/key.jpg' data-width='2000' data-height='1500'>
+              <strong>Key Pendant</strong><br>
+              <small>Materials: Bronze plated steel</small>
+            </div>
+            <div data-src='./images/shapeways/batarang.jpg' data-width='2000' data-height='1500'>
+              <strong>Batarang Bottle Opener:</strong> A bottle opener inspired by Batman Beyond.<br>
+              <small>Materials: Stainless steel</small>
+            </div>
+            <div data-src='./images/shapeways/clefflake.jpg' data-width='2000' data-height='1500'>
+              <strong>Treble Clef Snowflake Ornament</strong><br>
+              <small>Materials: White nylon plastic</small>
+            </div>
+            <div data-src='./images/shapeways/hammer.jpg' data-width='2000' data-height='1500'>
+              <strong>Cael Hammer:</strong> A keychain based on the Cael Hammer from Supergiant Games' <i>Bastion.</i><br>
+              <small>Materials: White nylon plastic</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id='woodwork' class='project-container'>
+        <img class='project-preview' src='./images/woodwork/woodwork_preview.jpg' alt=''>
+        <div class='project-details'>
+          <div class='project-title'>Woodwork</div>
+          <div class='project-description'>
+            My newest hobby is woodworking – I recently took an Introduction to Woodworking class at the Bronx Park Community Centre, and have signed up for three more classes since!
+          </div>
+          <div class='open-photoswipe-button outline-button-dark'>More</div>
+          <div class='project-gallery'>
+            <div data-src='./images/woodwork/holder_2.jpg' data-width='2000' data-height='1600'>
+              <strong>Fountain Pen Holder:</strong> Finished.<br>
+              <small>Materials: Black Walnut</small>
+            </div>
+            <div data-src='./images/woodwork/holder_1.jpg' data-width='2000' data-height='1500'>
+              <strong>Fountain Pen Holder:</strong> In progress.<br>
+              <small>Materials: Black Walnut</small>
+            </div>
+            <div data-src='./images/woodwork/shelf.jpg' data-width='1500' data-height='2000'>
+              <strong>Bookshelf/TV stand:</strong> My first project, completed as part of the Introduction to Woodworking class.<br>
+              <small>Materials: Pine</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id='contact'>
     <h2>Contact</h2>
     <form id='contact-form'>
@@ -149,6 +278,8 @@
         <div class='pswp__top-bar'>
           <div class='pswp__counter'></div>
           <button class='pswp__button pswp__button--close' title='Close (Esc)'></button>
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+          <button class='pswp__button pswp__button--zoom' title='Zoom in/out'></button>
           <div class='pswp__preloader'>
             <div class='pswp__preloader__icn'>
               <div class='pswp__preloader__cut'>
