@@ -94,13 +94,26 @@
           <div class='project-title'>Snow Accumulation Shader</div>
           <div class='project-subtitle'>Unity</div>
           <div class='project-description'>
-            For my term project in Graphics 2, I created a surface shader for Unity to simulate snow accumulation. Snow in video games is usually made using either a pre-modelled snow mesh or a flat snow shader, resulting in snow that isn't affected by changes in weather. By allowing the depth and accumulation direction to vary depending on the weather, I created snow that is more dynamic and interesting than either of those methods.
+            For my term project in Graphics 2, I created a vertex and surface shader for Unity to simulate snow accumulation. Snow in video games is usually made using either a pre-modelled snow mesh or a flat snow shader, resulting in snow that isn't affected by changes in weather. By allowing the depth and accumulation direction to vary depending on the weather, I created snow that is more dynamic and interesting than either of those methods.
           </div>
           <div class='open-photoswipe-button outline-button-dark'>More</div>
           <div class='project-gallery'>
-            <div data-src='./images/shader/shader_preview.jpg' data-width='952' data-height='635'></div>
-            <div data-src='./images/shader/om.jpg' data-width='1352' data-height='686'></div>
-            <div data-src='./images/shader/covered_norms.jpg' data-width='1565' data-height='880'></div>
+            <div data-src='./images/shader/rocks.gif' data-width='1200' data-height='675'>
+              The shader allows the user to fine-tune an object's appearance by modifing a number of properties, including the depth, direction, and amount of snow coverage.
+            </div>
+            <div data-src='./images/shader/lions.png' data-width='1200' data-height='800'>
+              <strong>Left:</strong> A light layer of snow smooths out surface details, but doesn't add any height.<br>
+              <strong>Right:</strong> Heavier snow piles up on top of the object.
+            </div>
+            <div data-src='./images/shader/norms.png' data-width='1800' data-height='1200'>
+              The scale of the base mesh's covered and uncovered normals can be changed seperately. Lowering the normal scale in areas that are covered makes the snow appear thicker, without deforming the mesh.
+            </div>
+            <div data-src='./images/shader/blend.png' data-width='1800' data-height='1200'>
+              <strong>Right:</strong> The colour blend property helps make the snow appear more realistic by softening sharp edges.
+            </div>
+            <div data-src='./images/shader/fountains.png' data-width='1200' data-height='800'>
+              The shader uses a "snow occlusion map" texture to prevent snow accumulation in some areas. It's used here to prevent snow accumulating under the water, and on the second ledge.
+            </div>
           </div>
         </div>
       </div>
