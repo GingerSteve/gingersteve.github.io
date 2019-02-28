@@ -8,6 +8,30 @@ $(function() {
     return $(this).attr('href');
   });
 
+  // Fun Facts section
+  var factInterval = 8000;
+  var factCount = $('.fact').length;
+  var fact = Math.round(Math.random() * factCount);
+  $('.fact').eq(fact).addClass('active');
+  $('.fact').eq(fact).show();
+  var nextFact = window.setInterval(displayFact, factInterval);
+
+  function displayFact() {
+    width = 100;
+    fact = (fact + 1) % factCount;
+    $('.fact.active').fadeOut('slow', () => {
+      $('.fact').removeClass('active');
+      $('.fact').eq(fact).addClass('active');
+      $('.fact').eq(fact).fadeIn('slow');
+    });
+  }
+
+  $('#facts').click(() => {
+    displayFact();
+    clearInterval(nextFact);
+    nextFact = setInterval(displayFact, factInterval);
+  });
+
   // Update the position of the nav bar when the window is resized
   $(window).resize(function(e) {
     navPos = $('header').position().top + $('header').outerHeight(true) - $('nav').outerHeight(true);
