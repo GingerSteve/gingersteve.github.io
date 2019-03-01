@@ -244,7 +244,7 @@ h2::after {
 .project-details {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex: 1 1 0;
   padding-left: 15px;
 }
 
