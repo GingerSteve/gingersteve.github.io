@@ -244,8 +244,13 @@ h2::after {
 .project-details {
   display: flex;
   flex-direction: column;
-  flex: 1 1 0;
   padding-left: 15px;
+}
+
+@media (min-width: 980px) {
+  .project-details {
+    flex: 1 1 0;
+  }
 }
 
 .project-title {
