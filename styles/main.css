@@ -41,6 +41,7 @@ nav {
 
   background-color: #181818;
   color: #fafafa;
+  z-index: 100;
 }
 
 nav.fixed {
