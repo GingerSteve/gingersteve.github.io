@@ -12,6 +12,13 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-130811207-2');
+
+    window.addEventListener('beforeunload', function (e) {
+      gtag('config', 'UA-130811207-2', {
+        'page_title': 'exit',
+        'page_path': '/exit'
+      });
+    });
   </script>
 
   <title>Steve Marshall</title>
@@ -169,7 +176,7 @@
         <div class='fact'><strong>Fun Fact: </strong>I performed on Rainbow Stage as a villager in <i>Beauty and the Beast</i>.</div>
         <div class='fact'><strong>Fun Fact: </strong>My favourite time of year is grilling season. 🍔</div>
         <div class='fact'><strong>Fun Fact: </strong>I'm okay at juggling.</div>
-        <div class='fact'><strong>Fun Fact: </strong>I enjoy reading, music, board games, and video games.</div>
+        <div class='fact'><strong>Fun Fact: </strong>I enjoy reading, music, cooking, board games, and video games.</div>
         <div class='fact'><strong>Fun Fact: </strong>My wife and I went to Kenya as part of a volunteer medical team that treated over 1000 patients in one week.</div>
         <div class='fact'><strong>Fun Fact: </strong>While in Kenya, we were chased by an angry pack of Vervet monkeys.</div>
         <div class='fact'><strong>Fun Fact: </strong>I played Rev. Shaw Moore in my high school's production of <i>Footloose</i>.</div>
