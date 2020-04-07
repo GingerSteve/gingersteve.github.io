@@ -366,10 +366,6 @@ textarea {
   min-height: 150px;
 }
 
-input[name='title'] {
-  display: none;
-}
-
 .ajax-button {
   position: relative;
   margin-top: 15px;
