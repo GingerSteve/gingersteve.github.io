@@ -1,4 +1,6 @@
 $(function() {
+  const key = 'bPsf44ypW9Yc@KkS$jgr9!bkTzk3gqAg';
+
   particlesJS.load('particles-js', './scripts/particlesjs-config.json');
 
   var navPos = $('nav').position().top;
@@ -141,6 +143,7 @@ $(function() {
     array.forEach(i => {
       json[i.name] = i.value;
     });
+    json.key = key;
 
     var request = $.ajax({
       url: 'https://prt2rnb72i.execute-api.us-west-2.amazonaws.com/default/contact',
