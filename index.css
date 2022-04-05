@@ -1,0 +1,128 @@
+:root {
+  --particles-bg: #212121;
+  --link-focus: #ff9c00;
+  --link-active: #cc7e00;
+  --text-light: #fafafa;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  color: var(--text-light);
+  background-color: var(--particles-bg);
+  font-family: "Open Sans", sans-serif;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 6.25rem;
+}
+
+h1 {
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+  font-size: 4rem;
+  margin: 0.25em;
+}
+
+#particles-js {
+  position: absolute;
+  background-color: var(--particles-bg);
+  top: 0px;
+  bottom: 0px;
+  left: -100px;
+  right: -100px;
+  z-index: -1;
+}
+
+@media (prefers-reduced-motion) {
+  #particles-js {
+    display: none;
+  }
+}
+
+#subtitle {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14pt;
+}
+
+a {
+  position: relative;
+  margin: 0px 2rem;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+
+  transition: fill 0.25s;
+  color: var(--text-light);
+  fill: var(--text-light);
+  outline: none;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  fill: var(--link-focus);
+}
+a:focus {
+  box-shadow: 0 0 0 2px var(--link-focus);
+}
+a:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+a:active {
+  fill: var(--link-active);
+}
+
+a .icon-link {
+  display: block;
+  height: 2rem;
+  width: 2rem;
+}
+
+/* Hidden link text, shows when navigating to links with keyboard */
+a:focus .hidden {
+  clip: auto;
+  height: auto;
+  overflow: auto;
+  position: absolute;
+  width: auto;
+
+  top: -1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hidden, a:focus:not(:focus-visible) .hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
