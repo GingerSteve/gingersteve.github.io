@@ -45,13 +45,6 @@ footer {
   height: 6.25rem;
 }
 
-h1 {
-  font-family: "Roboto Slab", serif;
-  text-align: center;
-  font-size: 4rem;
-  margin: 0.25em;
-}
-
 #particles-js {
   position: absolute;
   background-color: var(--particles-bg);
@@ -68,10 +61,17 @@ h1 {
   }
 }
 
+#title {
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+  font-size: 4rem;
+  margin: 0.25em;
+}
+
 #subtitle {
   font-style: italic;
   font-weight: 300;
-  font-size: 14pt;
+  font-size: 1.125rem;
 }
 
 a {
