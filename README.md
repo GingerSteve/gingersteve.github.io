@@ -2,4 +2,4 @@
 
 [thestevemarshall.com](https://thestevemarshall.com)
 
-Background from [Particles.js](github.com/VincentGarreau/particles.js) by [VincentGarreau](https://github.com/VincentGarreau).
+Background from [Particles.js](https://github.com/VincentGarreau/particles.js) by [VincentGarreau](https://github.com/VincentGarreau).
