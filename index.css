@@ -1,8 +1,15 @@
 :root {
-  --particles-bg: #212121;
-  --link-focus: #ff9c00;
-  --link-active: #cc7e00;
-  --text-light: #fafafa;
+  --bg-color: var(--ctp-latte-base);
+  --link-focus: var(--ctp-latte-rosewater);
+  --text: var(--ctp-latte-text);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: var(--ctp-mocha-base);
+    --link-focus: var(--ctp-mocha-rosewater);
+    --text: var(--ctp-mocha-text);
+  }
 }
 
 html {
@@ -16,116 +23,108 @@ html {
 }
 
 body {
-  margin: 0;
-  color: var(--text-light);
-  background-color: var(--particles-bg);
+  margin: 1rem 1.5rem;
+  color: var(--text);
+  background-color: var(--bg-color);
   font-family: "Open Sans", sans-serif;
+  transition: color 250ms, fill 250ms;
 }
 
 main {
-  height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
+  gap: 0.75rem;
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-
-  padding: 0.75rem;
-}
-
-#particles-js {
-  position: absolute;
-  background-color: var(--particles-bg);
-  top: 0px;
-  bottom: 0px;
-  left: -100px;
-  right: -100px;
-  z-index: -1;
-}
-
-@media (prefers-reduced-motion) {
-  #particles-js {
-    display: none;
-  }
-}
-
-#title {
+h1 {
   font-family: "Roboto Slab", serif;
-  text-align: center;
-  font-size: 4rem;
-  margin: 0.25em;
-}
-
-#subtitle {
-  font-style: italic;
-  font-weight: 300;
-  font-size: 1.125rem;
+  font-size: 3rem;
+  margin: 0.5em 0;
+  line-height: 0.9em;
 }
 
 a {
   position: relative;
-  margin: 1rem 2rem;
-  padding: 0.25rem;
-  border-radius: 0.5rem;
+  border-radius: 4px;
 
-  transition: fill 0.25s;
-  color: var(--text-light);
-  fill: var(--text-light);
-  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+
+  color: var(--text);
+  fill: currentColor;
+  outline-offset: 0.25em;
   text-decoration: none;
+  transition: color 250ms, fill 250ms;
 }
 a:hover,
 a:focus {
-  fill: var(--link-focus);
+  color: var(--link-focus);
 }
 a:focus {
-  box-shadow: 0 0 0 2px var(--link-focus);
+  outline: 2px solid currentColor;
 }
 a:focus:not(:focus-visible) {
-  box-shadow: none;
+  outline: none;
 }
 a:active {
-  fill: var(--link-active);
+  opacity: 0.7;
 }
 
 a svg {
-  display: block;
-  height: 2rem;
-  width: 2rem;
+  --size: 1.75rem;
+  display: inline-block;
+  height: var(--size);
+  width: var(--size);
 }
 
-/* Hidden link text, shows when navigating to links with keyboard */
-a:focus .hidden {
-  clip: auto;
-  height: auto;
-  overflow: auto;
-  position: absolute;
-  width: auto;
-
-  top: -1.5em;
-  left: 50%;
-  transform: translateX(-50%);
+a.github {
+  --link-focus: var(--ctp-latte-mauve);
 }
 
-.hidden,
-a:focus:not(:focus-visible) .hidden {
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+a.linkedin {
+  --link-focus: var(--ctp-latte-blue);
+}
+
+a.instagram {
+  --link-focus: var(--ctp-latte-yellow);
+}
+
+a.printables {
+  --link-focus: var(--ctp-latte-peach);
+}
+
+a.youtube {
+  --link-focus: var(--ctp-latte-red);
+}
+
+a.makerworld {
+  --link-focus: var(--ctp-latte-green);
+}
+
+@media (prefers-color-scheme: dark) {
+  a.github {
+    --link-focus: var(--ctp-mocha-mauve);
+  }
+
+  a.linkedin {
+    --link-focus: var(--ctp-mocha-blue);
+  }
+
+  a.instagram {
+    --link-focus: var(--ctp-mocha-yellow);
+  }
+
+  a.printables {
+    --link-focus: var(--ctp-mocha-peach);
+  }
+
+  a.youtube {
+    --link-focus: var(--ctp-mocha-red);
+  }
+
+  a.makerworld {
+    --link-focus: var(--ctp-mocha-green);
+  }
 }
